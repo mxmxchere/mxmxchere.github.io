@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US"><head><style class="darkreader darkreader--fallback" media="screen"></style><style class="darkreader darkreader--text" media="screen"></style><style class="darkreader darkreader--invert" media="screen"></style><style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}</style><style class="darkreader darkreader--user-agent" media="screen">html {
+    background-color: #181a1b !important;
+}
+html, body, input, textarea, select, button {
+    background-color: #000;
+}
+html, body, input, textarea, select, button {
+    border-color: #575757;
+    color: #e8e6e3;
+}
+a {
+    color: #3391ff;
+}
+table {
+    border-color: #4c4c4c;
+}
+::placeholder {
+    color: #bab5ab;
+}
+::selection {
+    background-color: #005ccc;
+    color: #ffffff;
+}
+::-moz-selection {
+    background-color: #005ccc;
+    color: #ffffff;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #545b00 !important;
+    color: #e8e6e3 !important;
+}
+::-webkit-scrollbar {
+    background-color: #1c1e1f;
+    color: #c5c1b9;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #2a2c2e;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #323537;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #3d4043;
+}
+::-webkit-scrollbar-corner {
+    background-color: #181a1b;
+}
+* {
+    scrollbar-color: #2a2c2e #1c1e1f;
+}</style>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Countdown 2º Clock</title>
+        <link rel="stylesheet" type="text/css" href="cc_files/carbon_clock.css"><style class="darkreader darkreader--cors" media="screen">html {height:100%;
+      background-color: #000000;
+}
+#video_background {
+    background-color:#000000 ;
+    top: 0px; 
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+body {
+    color: #FFFFFF;
+    font-family:monospace;
+    font-size:3.7vw;
+    font-weight: lighter;
+    line-height: 0.5;
+    margin:0px;
+    height:100%;
+    overflow: hidden;
+}
+table{
+    margin: 11px 0;
+    padding: 0;
+    border: 0;
+    //width: 94%;
+    text-align: right;
+}
+th, td{
+    width: 33px;
+    height: 22px;
+    margin: 0;
+    padding-left: 5px;
+    text-align: center;
+    //font-size: 15px;
+    font-weight: normal;
+}
+th{
+    //color: #0067a1;
+    font-size: 1.85vw;
+}
+#milliseconds{
+    width: 33px;
+}
+#carbontonnes{
+    margin-top: 11px;
+}
+#global-temp{
+    margin-top:-7vw;
+}
+#wrapper{
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;
+}
+#main{
+    position: fixed;
+    top: 0px; 
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    display: table;
+    z-index: 50;
+}
+#footer{
+    position:absolute;
+    bottom:10px;
+    left: 10px;
+    color: #005482;
+    font-size:2vw;
+    display: none;
+}
+
+#buttons{
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    font-size:1vw;
+}
+#buttons ul {
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+}
+#buttons li {
+    float: left;
+    padding:5px;
+}
+#buttons li a {
+    padding: 5px;
+    text-decoration:none;
+    color: #fff;
+    display: block;
+    font-size:2.5em;
+    border: 1px solid #fff;
+}
+#buttons li a:hover, #buttons li a.active {
+    //text-decoration: underline;
+    background-color: #fff;
+    color: #000;
+}
+h1 {
+    //text-transform:uppercase;
+    font-weight: normal;
+    font-size:1.85vw;
+    padding-top:4vw;
+}
+
+#deg{
+    position: absolute;
+    top: 9px;
+    left: 0;
+    right: 15px;
+}
+#buttons #onedeg{
+    float: right;
+}
+#range{
+    width: 22%;
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+}
+#growth{
+    width: 22%;
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    text-align: right;
+}
+#growth1{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+#growth2{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: none;
+}
+
+#mcc_logo {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+}
+
+@media only screen and (max-width: 640px) {
+
+    #buttons #deg a,
+    #buttons #range a,
+    #global-temp,
+    #time-to-two,
+    #tonnes,
+    #timecountdown th,
+    #timecountdown td,
+    #carbontonnes {
+        font-size: 3vw !important;
+    }
+
+    #buttons #range a {
+        width: 150px;
+    }
+
+    #global-temp {
+        margin-top: -14vw;
+    }
+
+}
+
+@media only screen and (max-width: 440px) {
+
+    #buttons #deg a,
+    #buttons #range a,
+    #global-temp,
+    #time-to-two,
+    #tonnes,
+    #timecountdown th,
+    #timecountdown td,
+    #carbontonnes {
+        font-size: 4.5vw !important;
+    }
+
+    #buttons #range a {
+        width: 150px;
+    }
+
+    #global-temp {
+        margin-top: -14vw;
+    }
+
+    #mcc_logo {
+        width: 85px;
+    }
+
+}</style><style class="darkreader darkreader--sync" media="screen"></style>
+        <script type="text/javascript" src="cc_files/jquery_002.js"></script><style class="darkreader darkreader--override" media="screen">.jfk-bubble {
+    background-color: #000000 !important;
+}
+.vimvixen-hint {
+    background-color: #7b5300 !important;
+    border-color: #d8b013 !important;
+    color: #f3e8c8 !important;
+}</style>
+        <script type="text/javascript" src="cc_files/CO2Calculator.js"></script>
+    </head>
+    <body>
+        
+        <div id="main">
+            <div id="wrapper" align="center">
+                <div id="footer">Minx, Creutzig, Edenhofer: "Climate goals require fast learning in negative emission technologies" (in press)</div>
+                <div id="buttons">
+                    <ul id="deg">
+                        <li><a id="2" href="javascript:void(0)" class="" style="padding-top: 20px;padding-bottom: 20px;">2°C scenario</a></li>
+                        <li id="onedeg"><a id="1.5" href="javascript:void(0)" class="active" style="padding-top: 20px;padding-bottom: 20px;">1.5°C scenario</a></li>
+                    </ul>
+                    <ul id="range" style="display: none">
+                        <li><a id="max" href="javascript:void(0)" class="">upper estimate</a></li>
+                        <li><a id="med" href="javascript:void(0)" class="active">medium estimate</a></li>
+                        <li><a id="min" href="javascript:void(0)" class="">lower estimate</a></li>
+                    </ul>
+                    <ul id="growth">
+                        <li id="growth1"><a id="zero" href="javascript:void(0)" class="active">no growth</a></li>
+                        <li id="growth2"><a id="current" href="javascript:void(0)" class="">current growth</a></li>
+                        <li><a target="_blank" href="https://www.mcc-berlin.net/en/research/co2-budget.html" style="border: 0px none; background: black none repeat scroll 0% 0%; --darkreader-inline-border-top:currentcolor; --darkreader-inline-border-right:currentcolor; --darkreader-inline-border-bottom:currentcolor; --darkreader-inline-border-left:currentcolor; --darkreader-inline-bgcolor:#000000; --darkreader-inline-bgimage:none;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="" data-darkreader-inline-bgcolor="" data-darkreader-inline-bgimage="" class=""><img style="width: 100%;" src="cc_files/mcc_logo_rz_1c_negativ.png" onmouseover="this.src='cc_files/mcc_logo_rz_1c_negativ_blue.png'" onmouseout="this.src='cc_files/mcc_logo_rz_1c_negativ.png'"></a></li>
+
+                    </ul>
+                </div>  
+                <h1 id="global-temp">CO<sub>2</sub> emissions [tons/sec]</h1>
+                <div id="global-temp-container"><span id="currentrate" class="bold grad">1'331</span></div>
+                <h1 id="time-to-two">time left until CO<sub>2</sub> budget depleted</h1>
+                <div id="timecountdown">
+                    <table cellspacing="30" cellpadding="0">
+                        <tbody><tr>
+                            <th style="padding-left: 0;">year</th>
+                            <th>month</th>
+                            <th>day</th>
+                            <th>hour</th>
+                            <th>min</th>
+                            <th>sec</th>
+                            <th>&nbsp;</th>
+                        </tr><tr style="padding-top: 20px;">
+                            <td id="years" style="color: rgb(255, 255, 255); --darkreader-inline-color:#ffffff;" data-darkreader-inline-color="">8</td>
+                            <td id="months" style="color: rgb(255, 255, 255); --darkreader-inline-color:#ffffff;" data-darkreader-inline-color="">7</td>
+                            <td id="days" style="color: rgb(255, 255, 255); --darkreader-inline-color:#ffffff;" data-darkreader-inline-color="">2</td>
+                            <td id="hours" style="color: rgb(255, 255, 255); --darkreader-inline-color:#ffffff;" data-darkreader-inline-color="">16</td>
+                            <td id="minutes" style="color: rgb(255, 255, 255); --darkreader-inline-color:#ffffff;" data-darkreader-inline-color="">1</td>
+                            <td id="seconds" style="color: rgb(255, 255, 255); --darkreader-inline-color:#ffffff;" data-darkreader-inline-color="">14</td>
+                        </tr>
+                    </tbody></table>
+                </div>
+                <!--<h5 id="timecountdown-labels"><span>y&nbsp;&nbsp;</span><span>m&nbsp;&nbsp;</span><span>d&nbsp;&nbsp;</span><span>h&nbsp;&nbsp;</span><span>m&nbsp;&nbsp;</span><span>s&nbsp;&nbsp;</span><span>cs</span></h5>-->
+                <h1 id="tonnes">CO<sub>2</sub> budget left [tons]</h1>
+                <div id="carbontonnes" style="color: rgb(255, 255, 255); --darkreader-inline-color:#ffffff;" data-darkreader-inline-color="">361'034'321'621</div>
+            </div>
+        </div>
+        <script>
+            switchScenarios();
+            $('#med').click();
+            $('#zero').click();
+        </script>
+    
+
+</body></html>

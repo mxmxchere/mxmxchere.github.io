@@ -1,0 +1,205 @@
+/*vertical align and color stuff*/
+html {height:100%;
+      background-color: #000000;
+}
+#video_background {
+    background-color:#000000 ;
+    top: 0px; 
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+body {
+    color: #FFFFFF;
+    font-family:Caput;
+    font-size:3.7vw;
+    font-weight: lighter;
+    line-height: 0.5;
+    margin:0px;
+    height:100%;
+    overflow: hidden;
+}
+table{
+    margin: 11px 0;
+    padding: 0;
+    border: 0;
+    //width: 94%;
+    text-align: right;
+}
+th, td{
+    width: 33px;
+    height: 22px;
+    margin: 0;
+    padding-left: 5px;
+    text-align: center;
+    //font-size: 15px;
+    font-weight: normal;
+}
+th{
+    //color: #0067a1;
+    font-size: 1.85vw;
+}
+#milliseconds{
+    width: 33px;
+}
+#carbontonnes{
+    margin-top: 11px;
+}
+#global-temp{
+    margin-top:-7vw;
+}
+#wrapper{
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;
+}
+#main{
+    position: fixed;
+    top: 0px; 
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    display: table;
+    z-index: 50;
+}
+#footer{
+    position:absolute;
+    bottom:10px;
+    left: 10px;
+    color: #005482;
+    font-size:2vw;
+    display: none;
+}
+/* button css */
+#buttons{
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    font-size:1vw;
+}
+#buttons ul {
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+}
+#buttons li {
+    float: left;
+    padding:5px;
+}
+#buttons li a {
+    padding: 5px;
+    text-decoration:none;
+    color: #fff;
+    display: block;
+    font-size:2.5em;
+    border: 1px solid #fff;
+}
+#buttons li a:hover, #buttons li a.active {
+    //text-decoration: underline;
+    background-color: #fff;
+    color: #000;
+}
+h1 {
+    //text-transform:uppercase;
+    font-weight: normal;
+    font-size:1.85vw;
+    padding-top:4vw;
+}
+
+#deg{
+    position: absolute;
+    top: 9px;
+    left: 0;
+    right: 15px;
+}
+#buttons #onedeg{
+    float: right;
+}
+#range{
+    width: 22%;
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+}
+#growth{
+    width: 22%;
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    text-align: right;
+}
+#growth1{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+#growth2{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: none;
+}
+
+#mcc_logo {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+}
+
+@media only screen and (max-width: 640px) {
+
+    #buttons #deg a,
+    #buttons #range a,
+    #global-temp,
+    #time-to-two,
+    #tonnes,
+    #timecountdown th,
+    #timecountdown td,
+    #carbontonnes {
+        font-size: 3vw !important;
+    }
+
+    #buttons #range a {
+        width: 150px;
+    }
+
+    #global-temp {
+        margin-top: -14vw;
+    }
+
+}
+
+@media only screen and (max-width: 440px) {
+
+    #buttons #deg a,
+    #buttons #range a,
+    #global-temp,
+    #time-to-two,
+    #tonnes,
+    #timecountdown th,
+    #timecountdown td,
+    #carbontonnes {
+        font-size: 4.5vw !important;
+    }
+
+    #buttons #range a {
+        width: 150px;
+    }
+
+    #global-temp {
+        margin-top: -14vw;
+    }
+
+    #mcc_logo {
+        width: 85px;
+    }
+
+}
