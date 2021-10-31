@@ -396,6 +396,8 @@ Error message and password prompt
 
 <li>Furcht...</li>
 
+<li>GCC grep warnings</li>
+
 <li>GDB+Qemu switch physical/logical memview</li>
 
 <li>Git push, specify identity file</li>
@@ -8825,7 +8827,7 @@ Error message and password prompt
 <div created="20180501091845164" modified="20180501091845164" title="$:/state/tag-manager/exployed">
 <pre>open</pre>
 </div>
-<div list="[[Git push, specify identity file]] [[IPMI Supermicro]] [[Proxmox Permission Management]] [[Size comparison]] [[k8s GoTemplate]] Coronalinks [[CO2(eq) - Examples]] [[Cisco Manage Sessions]] [[GDB+Qemu switch physical/logical memview]] [[Ansible Adhoc APT]] [[Creating a bootable ISO]] [[Debug Multiboot/GRUB problems with qemu-VM]]" title="$:/StoryList">
+<div list="[[GCC grep warnings]] [[Git push, specify identity file]] [[IPMI Supermicro]] [[Proxmox Permission Management]] [[Size comparison]] [[k8s GoTemplate]] Coronalinks [[CO2(eq) - Examples]] [[Cisco Manage Sessions]] [[GDB+Qemu switch physical/logical memview]] [[Ansible Adhoc APT]] [[Creating a bootable ISO]] [[Debug Multiboot/GRUB problems with qemu-VM]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9868,6 +9870,29 @@ Furcht führt zu Wut, Wut führt zu Hass. Hass führt zu unsäglichem Leid.
 Yoda
 </pre>
 </div>
+<div created="20211031140300277" modified="20211031140431229" tags="bash gcc" title="GCC grep warnings">
+<pre>This little script came to live when i had to get an overview of the amount and type of compilerwarnings. It summarizes how many warnings of which type are in a compilelog-file (bare output of gcc) and if there are warnings of not yet matched type
+
+```
+#!/usr/bin/env bash
+
+WARNING_STRINGS=(&quot;\-Woverflow&quot; &quot;\-Wbuiltin-declaration-mismatch&quot; &quot;sign-compare&quot; &quot;int-to-pointer-cast&quot; &quot;pointer-to-int-cast&quot; &quot;stringop-overflow&quot; &quot;unused-parameter&quot; &quot;unused-variable&quot; &quot;type-limits&quot; &quot;no-return&quot; &quot;declared inside parameter&quot; &quot;is promoted to&quot;)
+# dump first short make call
+MATCHCOUNT=0
+for i in &quot;${WARNING_STRINGS[@]}&quot;
+do
+    MATCHES=$(grep -c &quot;$i&quot; $1)
+    MATCHCOUNT=$(( $MATCHCOUNT + $MATCHES )) 
+    echo  &quot;$MATCHES $i&quot;
+done
+echo &quot;--------------------------&quot;
+MATCHES=$(grep -c &quot;warning:&quot; $1)
+echo  &quot;$MATCHCOUNT warnings in total (above summarized)&quot;
+echo  &quot;$MATCHES warnings in total (grep warning:)&quot;
+
+```
+</pre>
+</div>
 <div created="20201016121359853" modified="20201016121539004" tags="" title="GDB+Qemu switch physical/logical memview">
 <pre>Switch to phyiscal memview:
 
@@ -9878,8 +9903,7 @@ Switch to logical memview:
 `maintenance packet Qqemu.PhyMemMode:0`</pre>
 </div>
 <div created="20210717190428325" modified="20210717190548102" tags="link git" title="Git push, specify identity file">
-<pre>
-```
+<pre>```
 GIT_SSH_COMMAND='ssh -i id_rsa' git push
 
 ```
