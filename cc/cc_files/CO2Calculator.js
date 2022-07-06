@@ -1,7 +1,7 @@
-var myVar = setInterval(myTimer, 1000);  // months in JS Date() starts with 0 - so Dec is 11 not 12
+var myVar = setInterval(myTimer, 1);  // months in JS Date() starts with 0 - so Dec is 11 not 12
 var secondsPerYear = 3600. * 24 * 365.25;
-var startDate = new Date(2018, 00, 01, 00, 00, 00);
-var initialAnnualEmissions = 42.0 * 1e+9;
+var startDate = new Date(2021, 00, 01, 00, 00, 00);
+var initialAnnualEmissions = 42.2 * 1e+9;
 var annualGrowthRate = 1.000; // 1.022;
 
 function switchScenarios() {
@@ -27,9 +27,9 @@ function switchScenarios() {
         range_id = $("#range .active").attr("id");
         deg_id = $("#deg .active").attr("id");
         if (deg_id === "1.5") {
-            totalBudget = 420 * 1e+9;
+            totalBudget = 361 * 1e+9;
         } else {
-            totalBudget = 1170 * 1e+9;
+            totalBudget = 1111 * 1e+9;
         }
 
         growth_id = $("#growth .active").attr("id");
@@ -64,6 +64,7 @@ function myTimer() {
         $("#timecountdown #hours").text(parseInt(dd[3])).css('color', '#fff');
         $("#timecountdown #minutes").text(parseInt(dd[2])).css('color', '#fff');
         $("#timecountdown #seconds").text(parseInt(dd[1])).css('color', '#fff');
+        $("#timecountdown #milliseconds").text(dd[0]).css('color', '#fff');  // AR: erased "parseInt" in order to          preserve leading zero
     }
     else {
         $("#time-to-two").html("time since CO<sub>2</sub> budget exhausted")
@@ -82,6 +83,7 @@ function myTimer() {
         $("#timecountdown #hours").text(parseInt(dd[3])).css('color', '#f00');
         $("#timecountdown #minutes").text(parseInt(dd[2])).css('color', '#f00');
         $("#timecountdown #seconds").text(parseInt(dd[1])).css('color', '#f00');
+        $("#timecountdown #milliseconds").text(dd[0]).css('color', '#f00');  // AR: erased "parseInt" in order to          preserve leading zero
     }
 
     var out = [];
