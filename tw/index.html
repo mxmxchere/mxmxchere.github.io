@@ -418,6 +418,8 @@ Error message and password prompt
 
 <li>Individualism</li>
 
+<li>Inspect OCI image</li>
+
 <li>IPMI Supermicro</li>
 
 <li>IPv6 all nodes multicast</li>
@@ -8835,7 +8837,7 @@ Error message and password prompt
 <div created="20180501091845164" modified="20180501091845164" title="$:/state/tag-manager/exployed">
 <pre>open</pre>
 </div>
-<div list="Ansible-inventory+jq... Recruiter-template Knuthi [[Android disable Privacy Indicators]] [[GCC grep warnings]] [[Git push, specify identity file]] [[IPMI Supermicro]] [[Proxmox Permission Management]] [[Size comparison]] [[k8s GoTemplate]] Coronalinks [[CO2(eq) - Examples]] [[Cisco Manage Sessions]] [[GDB+Qemu switch physical/logical memview]] [[Ansible Adhoc APT]] [[Creating a bootable ISO]] [[Debug Multiboot/GRUB problems with qemu-VM]]" title="$:/StoryList">
+<div list="[[Inspect OCI image]] Ansible-inventory+jq... Recruiter-template Knuthi [[Android disable Privacy Indicators]] [[GCC grep warnings]] [[Git push, specify identity file]] [[IPMI Supermicro]] [[Proxmox Permission Management]] [[Size comparison]] [[k8s GoTemplate]] Coronalinks [[CO2(eq) - Examples]] [[Cisco Manage Sessions]] [[GDB+Qemu switch physical/logical memview]] [[Ansible Adhoc APT]] [[Creating a bootable ISO]] [[Debug Multiboot/GRUB problems with qemu-VM]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -10013,6 +10015,25 @@ David Hume, mehr hier https://de.wikipedia.org/wiki/Humes_Gesetz</pre>
 Hating things that are popular doesnt necessarily make you an interesting person
 &lt;&lt;&lt;
 Buddha
+</pre>
+</div>
+<div created="20230212233724557" modified="20230212233936967" tags="" title="Inspect OCI image">
+<pre>
+```
+docker create --name suspect-container suspect-image:latest
+```
+
+```
+docker export suspect-container &gt; suspect-container.tar
+```
+
+```
+tar xfv suspect-container.tar
+```
+
+src: https://www.howtogeek.com/devops/how-to-inspect-a-docker-images-content-without-starting-a-container/
+
+
 </pre>
 </div>
 <div created="20210612083221734" modified="20210612083355802" tags="" title="IPMI Supermicro">
