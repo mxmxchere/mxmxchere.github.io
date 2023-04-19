@@ -144,6 +144,8 @@ Error message and password prompt
 
 <li>$:/state/folded/SQL Injection Test Strings</li>
 
+<li>$:/state/Link/--1502361583/search</li>
+
 <li>$:/state/plugin-info--270617185-$:/themes/tiddlywiki/snowwhite</li>
 
 <li>$:/state/plugin-info--270617185-$:/themes/tiddlywiki/vanilla</li>
@@ -427,6 +429,8 @@ Error message and password prompt
 <li>k8s GoTemplate</li>
 
 <li>Knuthi</li>
+
+<li>kubernetes merge kubeconfig</li>
 
 <li>LaTeX Tabbing</li>
 
@@ -8789,13 +8793,16 @@ Error message and password prompt
 <div created="20180122193155763" modified="20180122193204337" title="$:/state/folded/SQL Injection Test Strings">
 <pre>show</pre>
 </div>
+<div created="20230419174408670" modified="20230419174412127" title="$:/state/Link/--1502361583/search">
+<pre></pre>
+</div>
 <div created="20201024121349259" modified="20201024121542507" title="$:/state/plugin-info--270617185-$:/themes/tiddlywiki/snowwhite">
 <pre>yes</pre>
 </div>
 <div created="20201024121341538" modified="20201024121345184" title="$:/state/plugin-info--270617185-$:/themes/tiddlywiki/vanilla">
 <pre>no</pre>
 </div>
-<div created="20180122192724335" modified="20220503113041134" title="$:/state/showeditpreview">
+<div created="20180122192724335" modified="20230419174348724" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
 <div created="20180122211325522" modified="20180122211349487" title="$:/state/ShowPaletteEditor">
@@ -8837,7 +8844,7 @@ Error message and password prompt
 <div created="20180501091845164" modified="20180501091845164" title="$:/state/tag-manager/exployed">
 <pre>open</pre>
 </div>
-<div list="[[Inspect OCI image]] Ansible-inventory+jq... Recruiter-template Knuthi [[Android disable Privacy Indicators]] [[GCC grep warnings]] [[Git push, specify identity file]] [[IPMI Supermicro]] [[Proxmox Permission Management]] [[Size comparison]] [[k8s GoTemplate]] Coronalinks [[CO2(eq) - Examples]] [[Cisco Manage Sessions]] [[GDB+Qemu switch physical/logical memview]] [[Ansible Adhoc APT]] [[Creating a bootable ISO]] [[Debug Multiboot/GRUB problems with qemu-VM]]" title="$:/StoryList">
+<div list="[[kubernetes merge kubeconfig]] [[Inspect OCI image]] Ansible-inventory+jq... Recruiter-template Knuthi [[Android disable Privacy Indicators]] [[GCC grep warnings]] [[Git push, specify identity file]] [[IPMI Supermicro]] [[Proxmox Permission Management]] [[Size comparison]] [[k8s GoTemplate]] Coronalinks [[CO2(eq) - Examples]] [[Cisco Manage Sessions]] [[GDB+Qemu switch physical/logical memview]] [[Ansible Adhoc APT]] [[Creating a bootable ISO]] [[Debug Multiboot/GRUB problems with qemu-VM]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9342,8 +9349,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20180122211509815" dependents="" description="Basic theme" modified="20180122211509815" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" server-url="https://tiddlywiki.com/library/v5.1.15/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.15/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.15">
 <pre></pre>
 </div>
-<div created="20180122195800585" modified="20221203143706548" title="$:/temp/search">
-<pre>andr</pre>
+<div created="20180122195800585" modified="20230419174230799" title="$:/temp/search">
+<pre></pre>
 </div>
 <div created="20180122211509746" modified="20180122211509746" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.15/index.html" url="https://tiddlywiki.com/library/v5.1.15/index.html">
 <pre>loaded</pre>
@@ -10018,8 +10025,7 @@ Buddha
 </pre>
 </div>
 <div created="20230212233724557" modified="20230212233936967" tags="" title="Inspect OCI image">
-<pre>
-```
+<pre>```
 docker create --name suspect-container suspect-image:latest
 ```
 
@@ -10064,6 +10070,17 @@ k get secrets x -o go-template='{{.data.value|base64decode}}'
 </div>
 <div created="20220524072807063" modified="20220524072813770" tags="" title="Knuthi">
 <pre>https://shuvomoy.github.io/blogs/posts/Knuth-on-work-habits-and-problem-solving-and-happiness/</pre>
+</div>
+<div created="20230419174258455" modified="20230419174435108" tags="" title="kubernetes merge kubeconfig">
+<pre>
+```
+export KUBECONFIG=~/.kube/config:~/someotherconfig 
+kubectl config view --flatten
+
+```
+
+credits: https://stackoverflow.com/questions/46184125/how-to-merge-kubectl-config-file-with-kube-config
+</pre>
 </div>
 <div created="20180126190532231" modified="20180126190740352" tags="latex" title="LaTeX Tabbing">
 <pre>`\begin{tabbing}
