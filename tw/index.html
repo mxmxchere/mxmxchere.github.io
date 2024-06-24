@@ -134,6 +134,8 @@ Error message and password prompt
 
 <li>$:/DefaultTiddlers</li>
 
+<li>$:/Import</li>
+
 <li>$:/isEncrypted</li>
 
 <li>$:/palette</li>
@@ -8786,6 +8788,17 @@ Error message and password prompt
 <div created="20180122120703746" modified="20180122120703746" title="$:/DefaultTiddlers">
 <pre>[list[$:/StoryList]]</pre>
 </div>
+<div plugin-type="import" status="pending" title="$:/Import" type="application/json">
+<pre>{
+    &quot;tiddlers&quot;: {
+        &quot;Untitled&quot;: {
+            &quot;title&quot;: &quot;Untitled&quot;,
+            &quot;text&quot;: &quot;https://blog.pessoft.com/2019/09/06/mikrotik-script-automatic-dns-records-from-dhcp-leases/&quot;,
+            &quot;type&quot;: &quot;text/plain&quot;
+        }
+    }
+}</pre>
+</div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
 </div>
@@ -8810,7 +8823,7 @@ Error message and password prompt
 <div created="20201024121341538" modified="20201024121345184" title="$:/state/plugin-info--270617185-$:/themes/tiddlywiki/vanilla">
 <pre>no</pre>
 </div>
-<div created="20180122192724335" modified="20240624111646108" title="$:/state/showeditpreview">
+<div created="20180122192724335" modified="20240624112104888" title="$:/state/showeditpreview">
 <pre>no</pre>
 </div>
 <div created="20180122211325522" modified="20180122211349487" title="$:/state/ShowPaletteEditor">
@@ -10141,9 +10154,9 @@ Wer Menschheit sagt der lügt.
 Richard David Precht der sich auf Carl Schmitt bezieht.
 </pre>
 </div>
-<div created="20240624111008005" modified="20240624111651393" tags="" title="Mikrotik DNS entries from DHCP">
+<div created="20240624111008005" modified="20240624112108175" tags="" title="Mikrotik DNS entries from DHCP">
 <pre>```
-:local dnsDomain &quot;huette.stablerock.de&quot;
+:local dnsDomain &quot;domain.local&quot;
 :local dnsTtl &quot;01:00:00&quot;
 :local leaseComment &quot;dhcp-lease-script&quot;
 :local fullName &quot;$&quot;lease-hostname&quot;.$dnsDomain&quot;
@@ -10155,7 +10168,8 @@ Richard David Precht der sich auf Carl Schmitt bezieht.
     :delay 1
     /ip dns static add comment=&quot;$leaseComment&quot; address=&quot;$leaseActIP&quot; name=&quot;$fullName&quot; ttl=&quot;$dnsTtl&quot;
 }
-```</pre>
+```
+Props go to https://blog.pessoft.com/2019/09/06/mikrotik-script-automatic-dns-records-from-dhcp-leases/ and the guys linked there.</pre>
 </div>
 <div created="20240607041806283" modified="20240607044944049" tags="" title="mkinitcpio.conf">
 <pre>One of the most tedious tasks when it comes to install Arch (which almost happens never, due to my install that just works fine) is configuring the mkinitcpio.conf. It is super complicated, Hooks have to be mentioned in the correct order and if you mess something up your system wont boot and you can start all over with running a live-system mounting your disks and fiddle around with the conf, reboot and repeat that a few thousand times. But now i will write down my &quot;safe-harbour&quot; config here, to be on the safe side from now on 
